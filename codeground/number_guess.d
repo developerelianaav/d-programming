@@ -3,7 +3,6 @@ import std.process;
 
 void main() {
 	int rounds = 0;
-	int maxTries = 3;
 	int playerOneWins = 0;
 	int playerTwoWins = 0;
 
@@ -22,7 +21,6 @@ void main() {
 			while (playerOneNumber < 1 || playerOneNumber > 10) {
 				write("What number do you have in mind Player 1? ");
 				readf(" %s", &playerOneNumber);
-				writeln();
 			}
 
 			wait(spawnProcess("clear"));
@@ -30,7 +28,6 @@ void main() {
 			while (playerTwoGuess < 1 || playerTwoGuess > 10) {
 				write("Player 2, Guess what number Player 1 wrote! ");
 				readf(" %s", &playerTwoGuess);
-				writeln();
 			}
 			if (playerOneNumber == playerTwoGuess) {
 				++playerTwoWins;
@@ -45,7 +42,6 @@ void main() {
 			while (playerTwoNumber < 1 || playerTwoNumber > 10) {
 				write("What number do you have in mind Player 2? ");
 				readf(" %s", &playerTwoNumber);
-				writeln();
 			}
 
 			wait(spawnProcess("clear"));
@@ -53,7 +49,6 @@ void main() {
 			while (playerOneGuess < 1 || playerOneGuess > 10) {
 				write("Player 1, Guess what number Player 2 wrote! ");
 				readf(" %s", &playerOneGuess);
-				writeln();
 			}
 			if (playerTwoNumber == playerOneGuess) {
 				++playerOneWins;
